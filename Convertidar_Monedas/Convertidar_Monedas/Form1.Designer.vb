@@ -22,8 +22,8 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnConv = New System.Windows.Forms.Button()
+        Me.btn1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -37,27 +37,27 @@ Partial Class Form1
         Me.Button13 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnConv
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 26)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnConv.Location = New System.Drawing.Point(41, 26)
+        Me.btnConv.Name = "btnConv"
+        Me.btnConv.Size = New System.Drawing.Size(75, 23)
+        Me.btnConv.TabIndex = 0
+        Me.btnConv.Text = "Convertir"
+        Me.btnConv.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btn1
         '
-        Me.Button2.Location = New System.Drawing.Point(175, 162)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn1.Location = New System.Drawing.Point(158, 37)
+        Me.btn1.Name = "btn1"
+        Me.btn1.Size = New System.Drawing.Size(79, 32)
+        Me.btn1.TabIndex = 1
+        Me.btn1.Text = "primero"
+        Me.btn1.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(183, 170)
+        Me.Button3.Location = New System.Drawing.Point(255, 37)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 2
@@ -66,7 +66,7 @@ Partial Class Form1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(191, 178)
+        Me.Button4.Location = New System.Drawing.Point(199, 221)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 3
@@ -170,16 +170,16 @@ Partial Class Form1
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn1)
+        Me.Controls.Add(Me.btnConv)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnConv As Button
+    Friend WithEvents btn1 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
