@@ -40,11 +40,13 @@ Partial Class Form1
         Me.ComboObligatorio = New System.Windows.Forms.ComboBox()
         Me.btnEli_Ulti = New System.Windows.Forms.Button()
         Me.btnC = New System.Windows.Forms.Button()
+        Me.TxtResultado = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnConv
         '
-        Me.btnConv.Location = New System.Drawing.Point(34, 12)
+        Me.btnConv.Location = New System.Drawing.Point(40, 36)
         Me.btnConv.Name = "btnConv"
         Me.btnConv.Size = New System.Drawing.Size(75, 23)
         Me.btnConv.TabIndex = 0
@@ -53,7 +55,7 @@ Partial Class Form1
         '
         'btn1
         '
-        Me.btn1.Location = New System.Drawing.Point(34, 55)
+        Me.btn1.Location = New System.Drawing.Point(37, 103)
         Me.btn1.Name = "btn1"
         Me.btn1.Size = New System.Drawing.Size(61, 23)
         Me.btn1.TabIndex = 1
@@ -62,7 +64,7 @@ Partial Class Form1
         '
         'btn3
         '
-        Me.btn3.Location = New System.Drawing.Point(165, 55)
+        Me.btn3.Location = New System.Drawing.Point(168, 103)
         Me.btn3.Name = "btn3"
         Me.btn3.Size = New System.Drawing.Size(61, 24)
         Me.btn3.TabIndex = 2
@@ -71,7 +73,7 @@ Partial Class Form1
         '
         'btn2
         '
-        Me.btn2.Location = New System.Drawing.Point(101, 56)
+        Me.btn2.Location = New System.Drawing.Point(104, 104)
         Me.btn2.Name = "btn2"
         Me.btn2.Size = New System.Drawing.Size(58, 23)
         Me.btn2.TabIndex = 3
@@ -80,7 +82,7 @@ Partial Class Form1
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(34, 84)
+        Me.Button5.Location = New System.Drawing.Point(37, 132)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(61, 24)
         Me.Button5.TabIndex = 4
@@ -89,7 +91,7 @@ Partial Class Form1
         '
         'btn6
         '
-        Me.btn6.Location = New System.Drawing.Point(165, 84)
+        Me.btn6.Location = New System.Drawing.Point(168, 132)
         Me.btn6.Name = "btn6"
         Me.btn6.Size = New System.Drawing.Size(61, 24)
         Me.btn6.TabIndex = 5
@@ -98,7 +100,7 @@ Partial Class Form1
         '
         'btn5
         '
-        Me.btn5.Location = New System.Drawing.Point(101, 84)
+        Me.btn5.Location = New System.Drawing.Point(104, 132)
         Me.btn5.Name = "btn5"
         Me.btn5.Size = New System.Drawing.Size(58, 23)
         Me.btn5.TabIndex = 6
@@ -107,7 +109,7 @@ Partial Class Form1
         '
         'btn7
         '
-        Me.btn7.Location = New System.Drawing.Point(34, 114)
+        Me.btn7.Location = New System.Drawing.Point(37, 162)
         Me.btn7.Name = "btn7"
         Me.btn7.Size = New System.Drawing.Size(61, 23)
         Me.btn7.TabIndex = 7
@@ -116,7 +118,7 @@ Partial Class Form1
         '
         'btn8
         '
-        Me.btn8.Location = New System.Drawing.Point(101, 113)
+        Me.btn8.Location = New System.Drawing.Point(104, 161)
         Me.btn8.Name = "btn8"
         Me.btn8.Size = New System.Drawing.Size(58, 23)
         Me.btn8.TabIndex = 8
@@ -125,7 +127,7 @@ Partial Class Form1
         '
         'btn0
         '
-        Me.btn0.Location = New System.Drawing.Point(34, 143)
+        Me.btn0.Location = New System.Drawing.Point(37, 190)
         Me.btn0.Name = "btn0"
         Me.btn0.Size = New System.Drawing.Size(61, 23)
         Me.btn0.TabIndex = 9
@@ -134,7 +136,7 @@ Partial Class Form1
         '
         'btn9
         '
-        Me.btn9.Location = New System.Drawing.Point(165, 113)
+        Me.btn9.Location = New System.Drawing.Point(168, 161)
         Me.btn9.Name = "btn9"
         Me.btn9.Size = New System.Drawing.Size(61, 23)
         Me.btn9.TabIndex = 10
@@ -143,16 +145,16 @@ Partial Class Form1
         '
         'btnCambiar
         '
-        Me.btnCambiar.Location = New System.Drawing.Point(255, 55)
+        Me.btnCambiar.Location = New System.Drawing.Point(29, 36)
         Me.btnCambiar.Name = "btnCambiar"
-        Me.btnCambiar.Size = New System.Drawing.Size(121, 37)
+        Me.btnCambiar.Size = New System.Drawing.Size(95, 28)
         Me.btnCambiar.TabIndex = 11
-        Me.btnCambiar.Text = "Cambiar"
+        Me.btnCambiar.Text = "Convertir"
         Me.btnCambiar.UseVisualStyleBackColor = True
         '
         'btnComa
         '
-        Me.btnComa.Location = New System.Drawing.Point(319, 12)
+        Me.btnComa.Location = New System.Drawing.Point(324, 37)
         Me.btnComa.Name = "btnComa"
         Me.btnComa.Size = New System.Drawing.Size(61, 23)
         Me.btnComa.TabIndex = 12
@@ -161,8 +163,9 @@ Partial Class Form1
         '
         'txtCalc
         '
-        Me.txtCalc.Location = New System.Drawing.Point(125, 12)
+        Me.txtCalc.Location = New System.Drawing.Point(130, 37)
         Me.txtCalc.Name = "txtCalc"
+        Me.txtCalc.ReadOnly = True
         Me.txtCalc.Size = New System.Drawing.Size(188, 22)
         Me.txtCalc.TabIndex = 13
         '
@@ -170,34 +173,53 @@ Partial Class Form1
         '
         Me.ComboObligatorio.FormattingEnabled = True
         Me.ComboObligatorio.Items.AddRange(New Object() {"Dolares", "Yenes", "Dragmas", "Libras"})
-        Me.ComboObligatorio.Location = New System.Drawing.Point(255, 98)
+        Me.ComboObligatorio.Location = New System.Drawing.Point(249, 102)
         Me.ComboObligatorio.Name = "ComboObligatorio"
-        Me.ComboObligatorio.Size = New System.Drawing.Size(121, 24)
+        Me.ComboObligatorio.Size = New System.Drawing.Size(136, 24)
         Me.ComboObligatorio.TabIndex = 14
         '
         'btnEli_Ulti
         '
-        Me.btnEli_Ulti.Location = New System.Drawing.Point(102, 143)
+        Me.btnEli_Ulti.Location = New System.Drawing.Point(168, 190)
         Me.btnEli_Ulti.Name = "btnEli_Ulti"
-        Me.btnEli_Ulti.Size = New System.Drawing.Size(57, 23)
+        Me.btnEli_Ulti.Size = New System.Drawing.Size(61, 23)
         Me.btnEli_Ulti.TabIndex = 15
-        Me.btnEli_Ulti.Text = "ELI_ULT"
+        Me.btnEli_Ulti.Text = "⌫"
         Me.btnEli_Ulti.UseVisualStyleBackColor = True
         '
         'btnC
         '
-        Me.btnC.Location = New System.Drawing.Point(165, 142)
+        Me.btnC.Location = New System.Drawing.Point(101, 189)
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(61, 24)
         Me.btnC.TabIndex = 16
         Me.btnC.Text = "C"
         Me.btnC.UseVisualStyleBackColor = True
         '
+        'TxtResultado
+        '
+        Me.TxtResultado.Location = New System.Drawing.Point(130, 66)
+        Me.TxtResultado.Name = "TxtResultado"
+        Me.TxtResultado.ReadOnly = True
+        Me.TxtResultado.Size = New System.Drawing.Size(188, 22)
+        Me.TxtResultado.TabIndex = 17
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(37, 67)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(92, 17)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "Resulltado ->"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(424, 346)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TxtResultado)
         Me.Controls.Add(Me.btnC)
         Me.Controls.Add(Me.btnEli_Ulti)
         Me.Controls.Add(Me.ComboObligatorio)
@@ -240,4 +262,6 @@ Partial Class Form1
     Friend WithEvents ComboObligatorio As ComboBox
     Friend WithEvents btnEli_Ulti As Button
     Friend WithEvents btnC As Button
+    Friend WithEvents TxtResultado As TextBox
+    Friend WithEvents Label1 As Label
 End Class

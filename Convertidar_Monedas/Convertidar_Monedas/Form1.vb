@@ -14,59 +14,59 @@
     Dim i As Double
 
 
-    Private Sub btnConv_Click(sender As Object, e As EventArgs) Handles btnConv.Click
-        primeraDoll = False
-        primeraDrag = False
-        primeraLibra = False
-        primeraYens = False
-        i = ComboObligatorio.SelectedIndex
-        Select Case i
-            Case 0
-                If primeraDoll = False Then
-                    Try
-                        dollars = InputBox("¿Cuanto vale el dolar?")
-                        primeraDoll = CDbl(txtCalc.Text) * dollars
-                        txtCalc.Text = Format(operacion, "0.00")
-                    Catch
-                        MsgBox("Introduce un número correcto.")
-                    End Try
-                End If
-            Case 1
-                If primeraYens = False Then
-                    Try
-                        yens = InputBox("¿Cuanto vale un yen?")
-                        primeraYens = CDbl(txtCalc.Text) * yens
-                        txtCalc.Text = Format(operacion, "0.00")
-                    Catch
-                        MsgBox("Introduce un número correcto.")
-                    End Try
+    'Private Sub btnConv_Click(sender As Object, e As EventArgs) Handles btnConv.Click
+    '    primeraDoll = False
+    '    primeraDrag = False
+    '    primeraLibra = False
+    '    primeraYens = False
+    '    i = ComboObligatorio.SelectedIndex
+    '    Select Case i
+    '        Case 0
+    '            If primeraDoll = False Then
+    '                Try
+    '                    dollars = InputBox("¿Cuanto vale el dolar?")
+    '                    primeraDoll = CDbl(txtCalc.Text) * dollars
+    '                    TxtResultado.Text = Format(operacion, "0.00")
+    '                Catch
+    '                    MsgBox("Introduce un número correcto para la convercion a dolares.")
+    '                End Try
+    '            End If
+    '        Case 1
+    '            If primeraYens = False Then
+    '                Try
+    '                    yens = InputBox("¿Cuanto vale un yen?")
+    '                    primeraYens = CDbl(txtCalc.Text) * yens
+    '                    TxtResultado.Text = Format(operacion, "0.00")
+    '                Catch
+    '                    MsgBox("Introduce un número correcto para la convercion a yenes.")
+    '                End Try
 
-                End If
-            Case 2
-                If primeraDrag = False Then
-                    Try
-                        dragmes = InputBox("¿Cuanto vale el Dragmas?")
-                        primeraDoll = CDbl(txtCalc.Text) * dragmes
-                        txtCalc.Text = Format(operacion, "0.00")
-                    Catch
-                        MsgBox("Introduce un número correcto para la convercion a dragmas.")
-                    End Try
+    '            End If
+    '        Case 2
+    '            If primeraDrag = False Then
+    '                Try
+    '                    dragmes = InputBox("¿Cuanto vale el Dragmas?")
+    '                    primeraDoll = CDbl(txtCalc.Text) * dragmes
+    '                    TxtResultado.Text = Format(operacion, "0.00")
+    '                Catch
+    '                    MsgBox("Introduce un número correcto para la convercion a dragmas.")
+    '                End Try
 
-                End If
-            Case 3
-                If primeraLibra = False Then
-                    Try
-                        librasEst = InputBox("¿Cuanto vale el Libras?")
-                        primeraDoll = CDbl(txtCalc.Text) * librasEst
-                        txtCalc.Text = Format(operacion, "0.00")
-                    Catch
-                        MsgBox("Introduce un número correcto.")
-                    End Try
+    '            End If
+    '        Case 3
+    '            If primeraLibra = False Then
+    '                Try
+    '                    librasEst = InputBox("¿Cuanto vale el Libras?")
+    '                    primeraDoll = CDbl(txtCalc.Text) * librasEst
+    '                    TxtResultado.Text = Format(operacion, "0.00")
+    '                Catch
+    '                    MsgBox("Introduce un número correcto para la convercion a libras.")
+    '                End Try
 
-                End If
+    '            End If
 
-        End Select
-    End Sub
+    '    End Select
+    'End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ComboObligatorio.SelectedIndex = 0
@@ -196,23 +196,45 @@
         Try
             Select Case i
                 Case 0
-                    dollars = InputBox("¿Cuanto vale dolar?")
-                    operacion = CDbl(txtCalc.Text) * dollars
-                    txtCalc.Text = Format(operacion, "0,00")
+                    If (primeraDoll = False) Then
+                        dollars = InputBox("¿Cuanto vale dolar?")
+                        operacion = CDbl(txtCalc.Text) * dollars
+                        TxtResultado.Text = Format(operacion, "0,00")
+                    Else
+                        operacion = CDbl(txtCalc.Text) * dollars
+                        TxtResultado.Text = Format(operacion, "0,00")
+                    End If
+
                 Case 1
-                    yens = InputBox("¿Cuanto vale yens?")
-                    operacion = CDbl(txtCalc.Text) * yens
-                    txtCalc.Text = Format(operacion, "0,00")
+                    If (primeraYens = False) Then
+                        yens = InputBox("¿Cuanto vale yens?")
+                        operacion = CDbl(txtCalc.Text) * yens
+                        TxtResultado.Text = Format(operacion, "0,00")
+                    Else
+                        operacion = CDbl(txtCalc.Text) * yens
+                    TxtResultado.Text = Format(operacion, "0,00")
+                    End If
                 Case 2
-                    dragmes = InputBox("¿Cuanto vale dragmes?")
-                    operacion = CDbl(txtCalc.Text) * dragmes
-                    txtCalc.Text = Format(operacion, "0,00")
+                    If (primeraDrag = False) Then
+                        dragmes = InputBox("¿Cuanto vale dragmes?")
+                        operacion = CDbl(txtCalc.Text) * dragmes
+                        TxtResultado.Text = Format(operacion, "0,00")
+                    Else
+                        operacion = CDbl(txtCalc.Text) * dragmes
+                        TxtResultado.Text = Format(operacion, "0,00")
+                    End If
                 Case 3
-                    librasEst = InputBox("¿Cuanto vale librasEst?")
-                    operacion = CDbl(txtCalc.Text) * librasEst
-                    txtCalc.Text = Format(operacion, "0,00")
+                    If (primeraLibra = False) Then
+                        librasEst = InputBox("¿Cuanto vale librasEst?")
+                        operacion = CDbl(txtCalc.Text) * librasEst
+                        TxtResultado.Text = Format(operacion, "0,00")
+                    Else
+                        operacion = CDbl(txtCalc.Text) * librasEst
+                        TxtResultado.Text = Format(operacion, "0,00")
+                    End If
             End Select
         Catch ex As Exception
+            MsgBox("Error")
 
         End Try
     End Sub
